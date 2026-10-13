@@ -1,0 +1,24 @@
+---
+description: Reglas del TF Módulo 5 — monitoreo forestal/sabanas con IA asistida
+alwaysApply: true
+---
+
+# TF Módulo 5 — Monitoreo forestal / sabanas
+
+Seguí `REGLAS_AGENTE.md` y `PIPELINE_TF.md`.
+
+## Cursor (plan gratuito): un bloque por vez
+
+- Un solo bloque por turno: descarga, ingest, features, model, validate o docs.
+- No inventar métricas, umbrales, bandas ni referencias.
+- No entrenar sin `docs/clases.md` completo.
+- No descargar con `config.VENTANAS` vacío: la ventana temporal es una decisión del cursante.
+- AOI orientativo 5.000–20.000 ha; si es mayor, pedir recorte documentado.
+- `data/raw` inmutable; todo umbral en `src/config.py` o `docs/clases.md`.
+- Sentinel-2 L2A (ESA) vía STAC, con composición por ventana (`src/download_s2_stac.py`).
+- Validación: split estratificado por clase, pocos píxeles por polígono.
+- Área: estimador ajustado por error (Olofsson et al., 2014). Nunca intervalo binomial sobre el conteo de píxeles.
+- MMU declarada y aplicada.
+- Primera mención de siglas: expandir (NDVI, NDMI, MMU, STAC, RF, AOI, ROI, OA).
+- Referencias en APA 7.ª; no inventar citas.
+- Al cerrar: resumen JSON con el esquema de `docs/resumen_template.json` + `docs/decisiones.md` con hechos confirmados por el cursante.

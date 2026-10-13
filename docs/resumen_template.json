@@ -1,0 +1,84 @@
+{
+  "proyecto": "TF_Modulo5_Monitoreo",
+  "cursante": "",
+  "fecha": "AAAA-MM-DD",
+  "variante": "A",
+  "aoi": "",
+  "crs": "EPSG:XXXXX",
+  "mmu_ha": 0.5,
+  "mmu": {
+    "aplicada": null,
+    "min_px": null,
+    "px_removidos": null
+  },
+  "insumos": {
+    "stack_v1": "",
+    "stack_v2": "",
+    "rois": "",
+    "aoi_path": "",
+    "ventanas": [],
+    "multitemporal": null
+  },
+  "parametros": {
+    "n_trees": 200,
+    "random_state": 42,
+    "frac_val": 0.3,
+    "min_dist_val_m": 200,
+    "max_px_train_por_roi": 300,
+    "max_px_val_por_roi": 5,
+    "features": [
+      "B2_v1",
+      "B3_v1",
+      "B4_v1",
+      "B8_v1",
+      "NDVI_v1",
+      "NDMI_v1"
+    ]
+  },
+  "muestreo": {
+    "n_rois_total": null,
+    "n_rois_train": null,
+    "n_rois_val": null,
+    "n_rois_descartados": null,
+    "n_rois_sin_pixeles": null,
+    "n_px_train": null,
+    "n_px_val": null,
+    "independencia": "distancia_minima | fallback_aleatorio_documentado"
+  },
+  "metricas": {
+    "labels": [],
+    "confusion_matrix": [],
+    "orientacion": "",
+    "oa": null,
+    "user_accuracy": [],
+    "producer_accuracy": [],
+    "n_val": null,
+    "nota": "Sin soporte para una clase se informa null; nunca se completa con un valor inventado."
+  },
+  "areas_ha": {
+    "1": {
+      "area_ajustada_ha": null,
+      "ic95_ha": [
+        null,
+        null
+      ],
+      "se_ha": null,
+      "area_conteo_pixeles_ha": null,
+      "nota": ""
+    }
+  },
+  "outputs": [],
+  "asistencia_ia": {
+    "herramienta": "",
+    "etapas": [],
+    "decisiones_humanas": [],
+    "verificacion": []
+  },
+  "limitaciones": [],
+  "referencias_clave": [
+    "Spataro (2026) Modulo 5",
+    "Belgiu & Dragut (2016)",
+    "Olofsson et al. (2014)"
+  ],
+  "_esquema": "Lo genera src/run_tf.py. Los campos cursante, aoi y asistencia_ia los completa el cursante. Nunca reemplazar un null por un valor estimado a mano."
+}

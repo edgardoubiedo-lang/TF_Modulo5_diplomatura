@@ -1,0 +1,13 @@
+# Archivos generados por Python (se regeneran solos)
+__pycache__/
+*.pyc
+
+# Metadatos auxiliares que QGIS crea junto a los raster
+*.aux.xml
+
+# Archivos temporales de Word/Office mientras un documento esta abierto
+~$*
+
+# Archivos de sistema
+Thumbs.db
+desktop.ini

@@ -1,0 +1,13 @@
+numpy>=1.24
+pandas>=2.0
+geopandas>=0.14
+rasterio>=1.3
+scikit-learn>=1.3
+scipy>=1.10
+shapely>=2.0
+# Opcional - descarga Sentinel-2 L2A (ESA) via STAC:
+pystac-client>=0.7
+planetary-computer>=1.0
+stackstac>=0.5
+rioxarray>=0.15
+xarray>=2023.1
