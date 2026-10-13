@@ -1,0 +1,224 @@
+{
+  "proyecto": "TF_Modulo5_Monitoreo",
+  "cursante": "Ubiedo Edgardo",
+  "fecha": "2026-10-12",
+  "variante": "A",
+  "aoi": "Parana Campana (Aldea Brasilera)",
+  "crs": "EPSG:32720",
+  "mmu_ha": 0.25,
+  "mmu": {
+    "aplicada": true,
+    "min_px": 25,
+    "px_removidos": 59129
+  },
+  "insumos": {
+    "stack_v1": "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\data\\raw\\stack_s2_v1.tif",
+    "stack_v2": "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\data\\raw\\stack_s2_v2.tif",
+    "rois": "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\data\\raw\\ROI.shp",
+    "aoi_path": "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\data\\raw\\AOI.shp",
+    "ventanas": [
+      [
+        "2025-12-01",
+        "2026-02-28"
+      ],
+      [
+        "2026-07-01",
+        "2026-09-01"
+      ]
+    ],
+    "multitemporal": true,
+    "recorte_aoi": true,
+    "aoi_ha": 12875.6
+  },
+  "parametros": {
+    "n_trees": 200,
+    "random_state": 42,
+    "frac_val": 0.3,
+    "min_dist_val_m": 200.0,
+    "max_px_train_por_roi": 300,
+    "max_px_val_por_roi": 5,
+    "features": [
+      "B2_v1",
+      "B3_v1",
+      "B4_v1",
+      "B8_v1",
+      "NDVI_v1",
+      "NDMI_v1",
+      "B2_v2",
+      "B3_v2",
+      "B4_v2",
+      "B8_v2",
+      "NDVI_v2",
+      "NDMI_v2",
+      "dNDVI"
+    ]
+  },
+  "muestreo": {
+    "n_rois_total": 42,
+    "n_rois_train": 27,
+    "n_rois_val": 14,
+    "n_rois_descartados": 1,
+    "n_rois_sin_pixeles": 0,
+    "n_px_train": 4842,
+    "n_px_val": 70,
+    "independencia": "distancia_minima"
+  },
+  "metricas": {
+    "labels": [
+      1,
+      2,
+      5,
+      6,
+      7
+    ],
+    "confusion_matrix": [
+      [
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        10,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        13,
+        20
+      ]
+    ],
+    "orientacion": "filas = clase del mapa; columnas = clase de referencia",
+    "oa": 0.7428571428571429,
+    "user_accuracy": [
+      1.0,
+      1.0,
+      1.0,
+      0.7,
+      0.5714285714285714
+    ],
+    "producer_accuracy": [
+      1.0,
+      1.0,
+      0.5,
+      0.35,
+      1.0
+    ],
+    "n_val": 70,
+    "nota": "Sin soporte para una clase se informa null; nunca se completa con un valor inventado."
+  },
+  "areas_ha": {
+    "1": {
+      "area_ajustada_ha": 366.52000000000004,
+      "ic95_ha": [
+        366.52000000000004,
+        366.52000000000004
+      ],
+      "se_ha": 0.0,
+      "area_conteo_pixeles_ha": 366.52,
+      "nota": null
+    },
+    "2": {
+      "area_ajustada_ha": 706.41,
+      "ic95_ha": [
+        706.41,
+        706.41
+      ],
+      "se_ha": 0.0,
+      "area_conteo_pixeles_ha": 706.41,
+      "nota": null
+    },
+    "5": {
+      "area_ajustada_ha": 3003.401142857143,
+      "ic95_ha": [
+        2136.4010347247768,
+        3870.401250989509
+      ],
+      "se_ha": 442.34699394508476,
+      "area_conteo_pixeles_ha": 1928.97,
+      "nota": null
+    },
+    "6": {
+      "area_ajustada_ha": 4183.777428571429,
+      "ic95_ha": [
+        2857.8518041141338,
+        5509.703053028723
+      ],
+      "se_ha": 676.4926655394362,
+      "area_conteo_pixeles_ha": 2240.02,
+      "nota": null
+    },
+    "7": {
+      "area_ajustada_ha": 4024.2514285714287,
+      "ic95_ha": [
+        2852.7782452612396,
+        5195.724611881618
+      ],
+      "se_ha": 597.6903996480557,
+      "area_conteo_pixeles_ha": 7042.4400000000005,
+      "nota": null
+    }
+  },
+  "outputs": [
+    "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\data\\processed\\mapa_prediccion.tif",
+    "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\outputs\\mapa_final.pdf"
+  ],
+  "asistencia_ia": {
+    "herramienta": "Claude (Anthropic), modelo configurado claude-opus-5-5. No se usaron otras herramientas de IA.",
+    "etapas": [
+      "Revision y actualizacion de REGLAS_AGENTE.md y PIPELINE_TF.md",
+      "Configuracion de rutas y valores del cursante en src/config.py",
+      "Deteccion de la zona UTM del AOI (EPSG:32720, confirmada por el cursante)",
+      "Verificacion de ROI y stacks con el codigo del proyecto",
+      "Deteccion y correccion del desplazamiento radiometrico L2A (BOA_ADD_OFFSET)",
+      "Recorte del mapa al AOI en src/run_tf.py",
+      "Script de consulta de escenas (src/listar_escenas_stac.py)",
+      "Diagnostico de muestras insuficientes y ejecucion de run_tf del 2026-10-12",
+      "Mapa final en PDF y PNG generado con src/mapa_final.py, a pedido del cursante",
+      "Redaccion de docs/decisiones.md y del borrador del informe"
+    ],
+    "decisiones_humanas": [
+      "Variante A",
+      "Pregunta de gestion y AOI",
+      "Esquema de clases y umbrales",
+      "Codigos de los ROI y ampliacion de Suelo desnudo y Suelo urbano",
+      "MMU de 0,25 ha",
+      "Ventanas temporales",
+      "Aprobacion de la correccion radiometrica y del recorte al AOI"
+    ],
+    "verificacion": [
+      "Contraste de las salidas con los apuntes del modulo",
+      "Repeticion de la corrida final en el equipo del cursante (2026-10-12) con resultados identicos"
+    ]
+  },
+  "limitaciones": [
+    "Validacion espacial minima: el desempeno puede degradarse fuera del AOI.",
+    "Superficie estimada con el estimador ajustado por error de Olofsson et al. (2014); su validez depende del tamano de la muestra de validacion por clase.",
+    "1 ROI fueron descartados por estar a menos de 200 m de un ROI de validacion."
+  ],
+  "referencias_clave": [
+    "Spataro (2026) Modulo 5",
+    "Belgiu & Dragut (2016)",
+    "Olofsson et al. (2014)"
+  ]
+}

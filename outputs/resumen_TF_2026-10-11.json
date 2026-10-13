@@ -1,0 +1,202 @@
+{
+  "proyecto": "TF_Modulo5_Monitoreo",
+  "cursante": "Ubiedo Edgardo",
+  "fecha": "2026-10-11",
+  "variante": "A",
+  "aoi": "Parana Campana (Aldea Brasilera)",
+  "crs": "EPSG:32720",
+  "mmu_ha": 0.25,
+  "mmu": {
+    "aplicada": true,
+    "min_px": 25,
+    "px_removidos": 48700
+  },
+  "insumos": {
+    "stack_v1": "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\data\\raw\\stack_s2_v1.tif",
+    "stack_v2": "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\data\\raw\\stack_s2_v2.tif",
+    "rois": "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\data\\raw\\ROI.shp",
+    "aoi_path": "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\data\\raw\\AOI.shp",
+    "ventanas": [
+      [
+        "2025-12-01",
+        "2026-02-28"
+      ],
+      [
+        "2026-07-01",
+        "2026-09-01"
+      ]
+    ],
+    "multitemporal": true,
+    "recorte_aoi": true,
+    "aoi_ha": 12875.6
+  },
+  "parametros": {
+    "n_trees": 200,
+    "random_state": 42,
+    "frac_val": 0.3,
+    "min_dist_val_m": 200.0,
+    "max_px_train_por_roi": 300,
+    "max_px_val_por_roi": 5,
+    "features": [
+      "B2_v1",
+      "B3_v1",
+      "B4_v1",
+      "B8_v1",
+      "NDVI_v1",
+      "NDMI_v1",
+      "B2_v2",
+      "B3_v2",
+      "B4_v2",
+      "B8_v2",
+      "NDVI_v2",
+      "NDMI_v2",
+      "dNDVI"
+    ]
+  },
+  "muestreo": {
+    "n_rois_total": 30,
+    "n_rois_train": 18,
+    "n_rois_val": 10,
+    "n_rois_descartados": 2,
+    "n_rois_sin_pixeles": 0,
+    "n_px_train": 3461,
+    "n_px_val": 50,
+    "independencia": "distancia_minima"
+  },
+  "metricas": {
+    "labels": [
+      1,
+      2,
+      5,
+      6,
+      7
+    ],
+    "confusion_matrix": [
+      [
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        10,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        10,
+        10
+      ]
+    ],
+    "orientacion": "filas = clase del mapa; columnas = clase de referencia",
+    "oa": 0.7,
+    "user_accuracy": [
+      1.0,
+      1.0,
+      1.0,
+      null,
+      0.4
+    ],
+    "producer_accuracy": [
+      1.0,
+      1.0,
+      0.5,
+      0.0,
+      1.0
+    ],
+    "n_val": 50,
+    "nota": "Sin soporte para una clase se informa null; nunca se completa con un valor inventado."
+  },
+  "areas_ha": {
+    "1": {
+      "area_ajustada_ha": null,
+      "ic95_ha": [
+        null,
+        null
+      ],
+      "se_ha": null,
+      "area_conteo_pixeles_ha": 368.56,
+      "nota": "sin soporte: la(s) clase(s) mapeada(s) [6] no tiene(n) al menos 2 muestras de validacion"
+    },
+    "2": {
+      "area_ajustada_ha": null,
+      "ic95_ha": [
+        null,
+        null
+      ],
+      "se_ha": null,
+      "area_conteo_pixeles_ha": 631.85,
+      "nota": "sin soporte: la(s) clase(s) mapeada(s) [6] no tiene(n) al menos 2 muestras de validacion"
+    },
+    "5": {
+      "area_ajustada_ha": null,
+      "ic95_ha": [
+        null,
+        null
+      ],
+      "se_ha": null,
+      "area_conteo_pixeles_ha": 2920.66,
+      "nota": "sin soporte: la(s) clase(s) mapeada(s) [6] no tiene(n) al menos 2 muestras de validacion"
+    },
+    "6": {
+      "area_ajustada_ha": null,
+      "ic95_ha": [
+        null,
+        null
+      ],
+      "se_ha": null,
+      "area_conteo_pixeles_ha": 1452.72,
+      "nota": "sin soporte: la(s) clase(s) mapeada(s) [6] no tiene(n) al menos 2 muestras de validacion"
+    },
+    "7": {
+      "area_ajustada_ha": null,
+      "ic95_ha": [
+        null,
+        null
+      ],
+      "se_ha": null,
+      "area_conteo_pixeles_ha": 7014.860000000001,
+      "nota": "sin soporte: la(s) clase(s) mapeada(s) [6] no tiene(n) al menos 2 muestras de validacion"
+    }
+  },
+  "outputs": [
+    "C:\\Users\\Equipo\\Documents\\Diplomatura UNNE SIG e IA\\Modulo 5\\TF_Modulo5 meteriales\\TF_Modulo5\\data\\processed\\mapa_prediccion.tif"
+  ],
+  "asistencia_ia": {
+    "herramienta": "",
+    "etapas": [],
+    "decisiones_humanas": [],
+    "verificacion": []
+  },
+  "limitaciones": [
+    "Validacion espacial minima: el desempeno puede degradarse fuera del AOI.",
+    "Superficie estimada con el estimador ajustado por error de Olofsson et al. (2014); su validez depende del tamano de la muestra de validacion por clase.",
+    "Clases sin superficie ajustada por falta de muestras de validacion: 1, 2, 5, 6, 7. Solo se informa el conteo de pixeles, sin intervalo.",
+    "2 ROI fueron descartados por estar a menos de 200 m de un ROI de validacion."
+  ],
+  "referencias_clave": [
+    "Spataro (2026) Modulo 5",
+    "Belgiu & Dragut (2016)",
+    "Olofsson et al. (2014)"
+  ]
+}
