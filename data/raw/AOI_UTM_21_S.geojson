@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "AOI_UTM_21_S",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32721" } },
+"features": [
+
+]
+}
